@@ -23,6 +23,8 @@ struct Geom {
     glm::vec3 translation;
     glm::vec3 rotation;
     glm::vec3 scale;
+	glm::vec3 animeT;
+	glm::vec3 animeR;
     glm::mat4 transform;
     glm::mat4 inverseTransform;
     glm::mat4 invTranspose;
@@ -64,6 +66,8 @@ struct PathSegment {
 	glm::vec3 color;
 	int pixelIndex;
 	int remainingBounces;
+	float time;
+	bool insideObject; // for refraction
 };
 
 // Use with a corresponding PathSegment to do:
